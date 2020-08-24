@@ -7,10 +7,11 @@ public class Ticket implements Comparable {
     private String to;
     private int time;
 
-    public Ticket(int price, String from, String to) {
+    public Ticket(int price, String from, String to, int time) {
         this.price = price;
         this.from = from;
         this.to = to;
+        this.time = time;
     }
 
     public Ticket() {
@@ -22,6 +23,7 @@ public class Ticket implements Comparable {
         return price - x.price;
     }
 
+
     public int getId() {
         return id;
     }
@@ -32,6 +34,10 @@ public class Ticket implements Comparable {
 
     public String getTo() {
         return to;
+    }
+
+    public int getTime() {
+        return time;
     }
 
 }
