@@ -1,6 +1,6 @@
 package domain;
 
-public class Ticket implements Comparable {
+public class Ticket implements Comparable<Ticket> {
     private int id;
     private int price;
     private String from;
@@ -17,9 +17,8 @@ public class Ticket implements Comparable {
     }
 
     @Override
-    public int compareTo(Object p) {
-        Ticket x = (Ticket) p;
-        return price - x.price;
+    public int compareTo(Ticket p) {
+        return price - p.price;
     }
 
     public int getId() {

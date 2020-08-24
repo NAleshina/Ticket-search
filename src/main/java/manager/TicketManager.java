@@ -16,7 +16,7 @@ public class TicketManager {
         Ticket[] tickets = new Ticket[0];
         Ticket[] ticketsAll = repository.getAll();
         for (Ticket ticket : ticketsAll) {
-            if (ticket.getFrom() == from && ticket.getTo() == to) {
+            if (ticket.getFrom().equalsIgnoreCase(from) && ticket.getTo().equalsIgnoreCase(to)) {
                 int length = tickets.length + 1;
                 Ticket[] tmp = new Ticket[length];
                 System.arraycopy(tickets, 0, tmp, 0, tickets.length);
